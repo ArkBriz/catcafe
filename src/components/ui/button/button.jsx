@@ -1,7 +1,7 @@
 import React from 'react';
-import '../../components/ui/button/style.css';
+import './style.css';
 
-function Button() {
+function Button({children}) {
     return (
         <button type="button" className="button">
             {children}
