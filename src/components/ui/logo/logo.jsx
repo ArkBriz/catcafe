@@ -1,7 +1,14 @@
 import React from 'react';
+import logo from '../../assets/img/logo.svg';
+import '../../components/ui/logo/style.css';
 
 function Logo() {
-    <></>;
+    return (
+        <a href="/" className="logо__link">
+            <img src={logo} alt="Логотип" />
+            <span className="logo__text">Котокафе</span>
+        </a>
+    );
 }
 
 export default Logo;
