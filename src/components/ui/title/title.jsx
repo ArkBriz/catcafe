@@ -6,9 +6,11 @@ export const TitleSize = {
     BIG: 'big',
 }
 
-function Title({children, size}) {
+function Title({children, size, as = 'h1'}) {
+    const Tag = as;
+
     return (
-        <h1 className={`title${size ? ` title_${size}` : ''}`}>{children}</h1>
+        <Tag className={`title${size ? ` title_${size}` : ''}`}>{children}</Tag>
     );
 }
 
