@@ -7,13 +7,19 @@ import './style.css';
 function StarsList({stars}) {
     return (
         <section className="stars-list">
-            <Title as="h2">Наши звезды</Title>
-            <ul className="stars-list__list">
-                <li className="stars-list__item">
-                    <StarCard />
-                </li>
-            </ul>
-            <Button minWidth={353}>Купить билет</Button>
+            {stars?.length ? (
+                <>
+                    <Title as="h2">Наши звезды</Title>
+                    <ul className="stars-list__list">
+                        {stars.map((star) => (
+                            <li className="stars-list__item" key={star.id}>
+                                <StarCard {...star}/>
+                            </li>
+                        ))}
+                    </ul>
+                    <Button minWidth={353}>Купить билет</Button>
+                </>
+            ) : null}
         </section>
     );
 }

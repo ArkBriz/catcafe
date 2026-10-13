@@ -2,23 +2,21 @@ import React from 'react';
 import Title, {TitleSize} from '../title/title';
 import './style.css';
 
-function StarCard() {
+function StarCard(star) {
     return (
         <article className="star-card">
             <div className="star-card__img-wrapper">
                 <img 
                     className="star-card__img" 
-                    src="https://i.ibb.co/27Mdx7k/Rectangle-4-2.png"
+                    src={star.image}
                     width={313}
                     height={320}
                     alt="изображение кота"
                 />
-                <span className="star-card__label">Ласковый</span>
+                <span className="star-card__label">{star.feature}</span>
             </div>
-            <Title as="h3" size={TitleSize.SMALL}>Кошка Сью</Title>
-            <p className="star-card__text">
-                Эта юная красавица очень общительная и ласковая уже с первого дня, как приехала в кафе.
-            </p>
+            <Title as="h3" size={TitleSize.SMALL}>{star.name}</Title>
+            <p className="star-card__text">{star.about}</p>
         </article>
     );
 }
