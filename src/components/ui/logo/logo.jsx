@@ -4,7 +4,7 @@ import './style.css';
 
 function Logo() {
     return (
-        <a href="/" className="logо__link">
+        <a href="/" className="logo__link">
             <img src={logo} alt="Логотип" />
             <span className="logo__text">Котокафе</span>
         </a>
