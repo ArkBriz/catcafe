@@ -17,4 +17,5 @@ body {
   line-height: 27px;
   font-weight: 400;
   color: #333333;
+  box-sizing: border-box;
 }
