@@ -1,22 +1,23 @@
 import React from 'react';
 import Title, {TitleSize} from '../title/title';
+import StarLabel from '../star-label/star-label';
 import './style.css';
 
-function StarCard(star) {
+function StarCard({name, about, image, feature}) {
     return (
         <article className="star-card">
             <div className="star-card__img-wrapper">
                 <img 
                     className="star-card__img" 
-                    src={star.image}
+                    src={image}
                     width={313}
                     height={320}
                     alt="изображение кота"
                 />
-                <span className="star-card__label">{star.feature}</span>
+                <StarLabel className="star-card__label" feature={feature}/>
             </div>
-            <Title as="h3" size={TitleSize.SMALL}>{star.name}</Title>
-            <p className="star-card__text">{star.about}</p>
+            <Title as="h3" size={TitleSize.SMALL}>{name}</Title>
+            <p className="star-card__text">{about}</p>
         </article>
     );
 }
